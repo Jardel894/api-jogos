@@ -2,7 +2,7 @@ package br.com.jardelbarbosa.apiJogos.principal
 
 import br.com.jardelbarbosa.apiJogos.modelo.Gamer
 import br.com.jardelbarbosa.apiJogos.modelo.Jogo
-import br.com.jardelbarbosa.apiJogos.servicos.CosumoApi
+import br.com.jardelbarbosa.apiJogos.servicos.ConsumoApi
 import transformarEmIdade
 import java.util.Scanner
 
@@ -18,7 +18,7 @@ fun main() {
         println("Digite um codigo de jogo para buscar:")
         val busca = leitura.nextLine()
 
-        val buscaApi = CosumoApi()
+        val buscaApi = ConsumoApi()
         val informacaoJogo = buscaApi.buscaJogo(busca)
 
         var meuJogo: Jogo? = null
